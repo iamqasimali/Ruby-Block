@@ -243,3 +243,18 @@ end
 * ✅ Bundler, Rake = package and automate Ruby projects
 
 ---
+double_proc = Proc.new { |i| puts i * 2 }
+
+
+[1, 2, 3, 4, 5].each{ |i|  puts i * 2}
+
+
+[1, 2, 3, 4, 5].each( &double_proc )
+
+
+double_proc = Proc.new { |num| print num * 2 }
+
+
+
+multiplication = lambda { |x, y| print x * y * 2 }
+multiplication = -> { |x, y| print x * y * 2 }
